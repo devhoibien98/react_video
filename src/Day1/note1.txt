@@ -1,0 +1,83 @@
+=====================================================================
+let:
+
+Có phạm vi block (block scope).
+Chỉ tồn tại trong cặp dấu ngoặc nhọn {} gần nhất chứa nó.
+Áp dụng cho các khối như if, for, while, và cả các khối đơn giản {}.
+
+
+var:
+
+Khi khai báo ở mức toàn cục:
+
+Có thể sử dụng ở bất kỳ đâu trong chương trình.
+Trở thành thuộc tính của đối tượng toàn cục (ví dụ: window trong trình duyệt).
+
+
+Khi khai báo trong một hàm:
+
+Chỉ có thể sử dụng bên trong hàm đó.
+Không thể truy cập từ bên ngoài hàm.
+
+
+Let : Khai báo String, Number ( Thay đổi dữ liệu kiểu nó )
+Const : khai báo Array, Object (Chỉ thay đổi bên trong)
+
+=====================================================================
+Number, String, Boolean => let
+Array, Object, Function => const
+
+=====================================================================
+3 cách định nghĩa FUNCTION : 
+function myFunction (){}
+const myFunction = function( ){}
+const myFunction = () => {} (Nếu chỉ có 1 dòng () =>  )
+
+========================================================================
+const myObject = {
+    key : 'value',
+    key2 : 'value2',
+}
+const MyArray = ['a', 'b', 'c'];
+myArray.length
+myArray.push()
+myArray.slice(start, end) ( Không thay đổi mảng gốc)
+myArray.map()
+
+Lấy value của OBJECT = object.key hoặc object[key]
+Láy value của Array = array[key] (Key của Array là index)
+======================================================================
+MODULES 
+export const myObject = {};
+export {myObject, myArray}
+export default myObject1;
+
+=======================================================================
+Asynchronous
+Promises
+const myPromise = new Promise((resolve, reject) =>{
+    if(isSuccess){
+        resolve();
+    } else {
+        reject();
+    }
+
+})
+myPromise.then((result) => result.slice(5)).catch((error) => error message)
+ BẤT ĐỒNG BỘ => CALLBACK, PROMISE, ASYNC/ AWAIT
+ fullfilled, rejected, pending
+======================================================================
+Async / Await 
+
+React is a JS Library
+JSX ( Javascript XML)
+
+=====================================================================
+Sử dụng nhiều thẻ bằng không phải thẻ div hay thẻ khác 
+thì dùng các thẻ <> hoặc <Fragment>
+Truyền biến vào trong REACT thì dùng {} (Binding)
+
+
+Component lifecycle : Initialization ( Biên dịch ) => Mounting (Gắn vào)
+=> Updation (Re-Render) => Unmounting (Tháo ra khỏi dự án)
+ 

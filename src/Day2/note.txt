@@ -1,0 +1,3 @@
+Các thuộc tính bên REACT được viết theo camelCase
+Khi sử dụng hàm mà có thêm () thì nó sẽ gọi hàm và hoạt động không chính xác vì
+khi BROWSER bật lên thì nó sẽ chạy luôn 
