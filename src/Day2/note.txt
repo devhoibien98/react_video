@@ -1,3 +1,29 @@
-Các thuộc tính bên REACT được viết theo camelCase
+//Các thuộc tính bên REACT được viết theo camelCase
 Khi sử dụng hàm mà có thêm () thì nó sẽ gọi hàm và hoạt động không chính xác vì
 khi BROWSER bật lên thì nó sẽ chạy luôn 
+
+====================================================================================
+STATE 
+
+Đã MOUNTING thì các giá trị trong render sẽ không thể thay đổi 
+( Không thể re-render nữa) nên
+phải dùng STATE để thay đổi trạng thái ( có thể re-render lại được)
+rcc : có setState
+rfc : có useState set lại State và re-render
+
+const [value(state), setValue(setState)] = useSatate(giá trị khởi tạo);
+Nó sẽ trả về mảng bao gồm 2 phần tử và destructuring nó ra
+
+Khi setState được chạy thì nó sẽ re-render lại COMPONENTS
+====================================================================================
+props
+
+định nghĩa như này :  Day2(props (là 1 object)) 
+nhưng truyền thì truyền như này :  <Day2 title="Alex" />
+
+dùng thì cứ lấy {props.title} = Alex
+
+Nếu không có dữ liệu thành undefined nếu gặp map, forEach thì sẽ bị lỗi
+
+======================================================================================= 
+39:23

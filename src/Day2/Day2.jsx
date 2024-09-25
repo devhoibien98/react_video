@@ -1,14 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 
-export default function Day2() {
+export default function Day2({ title, test, onClick }) {
+  //   let count = 0;
+  const [value, setValue] = useState("");
+  const [count, setCount] = useState(0);
   const handleClick = () => {
-    console.log("Button Clicked");
+    setCount(count + 1);
   };
+  const handleChange = (e) => {
+    console.log(value);
+    setValue(e.target.value);
+  };
+  console.log("Day2", title);
+
   return (
-    <div>
-      <button className="btn btn-success mt-3" onClick={handleClick}>
-        Click Me
+    <>
+      <p>
+        Title : {title}
+        {test}
+      </p>
+      <button className="btn btn-success" onClick={handleClick}>
+        Click Me {count}
       </button>
-    </div>
+      <input
+        className="mt-3"
+        type="text"
+        value={value}
+        onChange={handleChange}
+      />
+    </>
   );
 }
